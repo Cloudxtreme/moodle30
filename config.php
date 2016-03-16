@@ -42,8 +42,8 @@ $CFG->dbtype    = 'pgsql';      // 'pgsql', 'mariadb', 'mysqli', 'mssql', 'sqlsr
 $CFG->dblibrary = 'native';     // 'native' only at the moment
 $CFG->dbhost    = 'localhost';  // eg 'localhost' or 'db.isp.com' or IP
 $CFG->dbname    = 'moodle';     // database name, eg moodle
-$CFG->dbuser    = 'username';   // your database username
-$CFG->dbpass    = 'password';   // your database password
+$CFG->dbuser    = 'moodleuser';   // your database username
+$CFG->dbpass    = 'moodle';   // your database password
 $CFG->prefix    = 'mdl_';       // prefix to use for all table names
 $CFG->dboptions = array(
     'dbpersist' => false,       // should persistent database connections be
@@ -73,7 +73,7 @@ $CFG->dboptions = array(
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
 
-$CFG->wwwroot   = 'http://example.com/moodle';
+$CFG->wwwroot   = 'https://courses-test.centre.edu';
 
 
 //=========================================================================
@@ -89,7 +89,7 @@ $CFG->wwwroot   = 'http://example.com/moodle';
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
 
-$CFG->dataroot  = '/home/example/moodledata';
+$CFG->dataroot  = '/var/moodledata';
 
 
 //=========================================================================
@@ -103,7 +103,8 @@ $CFG->dataroot  = '/home/example/moodledata';
 // to make sure the web server process (eg Apache) can access the files.
 // NOTE: the prefixed 0 is important, and don't use quotes.
 
-$CFG->directorypermissions = 02777;
+$CFG->directorypermissions = 00777;
+$CFG->passwordsaltmain = '!<[>bZbvy3Gk^:~#n<su9gV/mla?';
 
 
 //=========================================================================
